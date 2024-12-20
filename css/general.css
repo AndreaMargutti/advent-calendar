@@ -16,6 +16,17 @@ body {
     margin: 0 auto;
 }
 
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.d-flex * {
+    margin: 0 auto;
+    flex-basis: calc((100% / 8) - 30px);
+}
+
 /*# header */
 
 .header {
@@ -26,9 +37,25 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #2d28eb;
+    margin-bottom: 20px ;
 }
 
 .header > h1 {
     color: white;
     padding: 10px;
+}
+
+/*# box */
+
+.box {
+    min-height: 100px;
+    background-color: #2e6754;
+    text-align: center;
+    /* padding: 5px; */
+    border-radius: 12px;
+}
+
+h2 {
+    color: white;
+    font-size: 2em;
 }
