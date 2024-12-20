@@ -6,10 +6,8 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #100645;
-    font-family: Livvic, sans-serif;
-}
+
+/*# utilites */
 
 .container {
     max-width: 1100px;
@@ -25,6 +23,13 @@ body {
 .d-flex * {
     margin: 0 auto;
     flex-basis: calc((100% / 8) - 30px);
+}
+
+/*# generals */
+
+body {
+    background-color: #100645;
+    font-family: Livvic, sans-serif;
 }
 
 /*# header */
