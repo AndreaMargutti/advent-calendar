@@ -4,5 +4,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     background-color: #100645;
+    font-family: Livvic, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/*# header */
+
+.header {
+    min-height: 15em;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+    background-image: url(../images/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2d28eb;
+}
+
+.header > h1 {
+    color: white;
+    padding: 10px;
 }
