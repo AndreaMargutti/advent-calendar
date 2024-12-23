@@ -13,5 +13,17 @@ In questo progetto ho realizzato un piccolo calendario dell'avvento per il 2024 
     - Questo grazie alla `localstorage` che salva le informazioni riguardanti le celle aperte.
 3. Bottone di *reset* che va ad eliminare le informazioni precedentemente salvate sulla `localstorage` riportando la pagina ad uno stato di "prima apertura" e permettendo di poter riutilizzare il calendario.
 
+## Usare questa repo
+Per visualizzare il risultato finale del mio lavoro basta seguire questi passaggi:
+1. Scaricare questa *repository* sul vostro computer
+2. Aprire la cartella
+3. Aprire il file `index.html` tramite browser
+
+Se avete **visual studio code** in alternativa al punto **3** potete seguire questi passaggi:
+1. Aprire la cartella scaricata direttamente con VS code
+2. Scaricare l'estensione *Live Server*
+3. Aprire il file `index.html`
+4. Fare un click con il tasto destro del muose e selezionare la voce *Open with live server*. 
+
 ## Credits
 Creato da *AndreaMargutti* via **Boolean**
