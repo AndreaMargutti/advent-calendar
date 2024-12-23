@@ -125,3 +125,25 @@ const source = [
         "url": "images/dance.gif"
     }
 ];
+
+// recupero il main DOM
+const mainDiv = document.getElementsByTagName('main');
+console.log(mainDiv)
+
+//Per il numero di caselle...
+for (let i = 0; i < 25; i++) {
+    //crea un div
+    const card = document.createElement('div');
+    //assegna la classe box
+    card.classList.add('box');
+
+    //creo un titolo
+    const cardNumer = document.createElement('h2');
+    cardNumer.innerText = i + 1;
+
+
+    // aggiungi la card nel DOM
+    mainDiv[0].appendChild(card);
+    card.appendChild(cardNumer);
+}
+
