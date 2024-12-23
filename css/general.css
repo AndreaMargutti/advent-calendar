@@ -74,3 +74,33 @@ h2 {
     color: white;
     font-size: 2em;
 }
+
+/*# modal */
+
+#modal {
+    background-color: #e78ab7;
+    padding: 30px;
+    margin: auto;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modal > img {
+    margin: 0;
+}
+
+#modal > button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2d28eb;
+    border: 0;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+}
