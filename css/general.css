@@ -58,6 +58,16 @@ body {
     text-align: center;
     /* padding: 5px; */
     border-radius: 12px;
+    padding: 5px;
+}
+
+.box:last-child {
+    flex-basis: 100%;
+    background-color: #d4d6f5;
+}
+
+.box:last-child > h2 {
+    color: #2e6754;
 }
 
 h2 {

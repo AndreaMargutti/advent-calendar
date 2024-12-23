@@ -149,5 +149,4 @@ for (let i = 0; i < 25; i++) {
     card.appendChild(cardIcon);
     card.appendChild(cardNumer);
     mainDiv[0].appendChild(card);
-
 }
