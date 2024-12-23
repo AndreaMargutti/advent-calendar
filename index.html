@@ -13,22 +13,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Advent Calendar
-                <br>
-                2024
-            </h1>
-        </header>
-        <main class="d-flex">
-            <!-- generare le caselle -->
-        </main>
-        <section id="modal">
-            <img src="./images/friends.gif" alt="">
-            <button>Chiudi</button>
-        </section>
-    </div>
+    <div class="overlay">
 
+        <div class="container">
+            <header class="header">
+                <h1>Advent Calendar
+                    <br>
+                    2024
+                </h1>
+            </header>
+            <main class="d-flex">
+                <!-- generare le caselle -->
+            </main>
+            <section id="modal" class="d-none">
+                <div id="modal-content">
+                    <!-- inserisco il contentuto -->
+                </div>
+                <button id="modal-button">Chiudi</button>
+            </section>
+        </div>
+        
+    </div>
     <!-- script -->
     <script src="./js/main.js"></script>
 </body>

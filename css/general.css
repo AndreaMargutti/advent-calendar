@@ -25,6 +25,10 @@
     flex-basis: calc((100% / 8) - 30px);
 }
 
+.d-none {
+    display: none;
+}
+
 /*# generals */
 
 body {
@@ -103,4 +107,16 @@ h2 {
     color: white;
     font-size: 1.1em;
     font-weight: 600;
+}
+
+/*# overlay */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
 }

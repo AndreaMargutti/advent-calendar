@@ -128,7 +128,10 @@ const source = [
 
 // recupero il main DOM
 const mainDiv = document.getElementsByTagName('main');
-console.log(mainDiv)
+
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modal-content');
+const modalBtn = document.getElementById('modal-button')
 
 //Per il numero di caselle...
 for (let i = 0; i < 25; i++) {
@@ -149,4 +152,25 @@ for (let i = 0; i < 25; i++) {
     card.appendChild(cardIcon);
     card.appendChild(cardNumer);
     mainDiv[0].appendChild(card);
+
+    card.addEventListener('click', function () {
+
+        if (source[i].type == 'image') {
+            const modalImg = document.createElement('img');
+            modalImg.src = `./${source[i].url}`;
+            modalContent.appendChild(modalImg);
+        } else {
+            const modalText = document.createElement('p');
+            modalText.innerText = source[i].text;
+            modalContent.appendChild(modalText);
+        }
+
+        modal.classList.remove('d-none')
+    })
+
+    modalBtn.addEventListener('click', function () {
+        modal.classList.add('d-none');
+
+        modalContent.innerHTML = '';
+    })
 }
