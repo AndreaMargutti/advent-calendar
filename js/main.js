@@ -134,8 +134,13 @@ const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modal-content');
 const modalBtn = document.getElementById('modal-button')
 
+// recupero gli elementi dalla memoria se ce ne sono
+const clickedCards = JSON.parse(localStorage.getItem('clickedCards')) || [];
+console.log(clickedCards);
+
 //Per il numero di caselle...
 for (let i = 0; i < 25; i++) {
+
     //crea un div
     const card = document.createElement('div');
     //assegna la classe box
@@ -155,8 +160,18 @@ for (let i = 0; i < 25; i++) {
     // aggiungo la card al DOM
     mainDiv[0].appendChild(card);
 
+    if (clickedCards.includes(i)) {
+        card.classList.add('open');
+    }
+
     // aggiungo il click alle card e...
     card.addEventListener('click', function () {
+
+        clickedCards.push(i);
+        // console.log(clickedCards);
+
+        // aggiungo la card cliccata alla localStorage
+        localStorage.setItem('clickedCards', JSON.stringify(clickedCards));
 
         // se il tipo = immagine
         if (source[i].type == 'image') {
@@ -176,8 +191,8 @@ for (let i = 0; i < 25; i++) {
         // compare l'immagine
         modal.classList.remove('d-none');
         // attivo l'overlay
-        overlayDiv.classList.add('overlay')
-        // cambio stile alla card
+        overlayDiv.classList.add('overlay');
+        // cambio aspetto alla card
         card.classList.add('open');
     })
 
