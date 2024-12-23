@@ -109,11 +109,13 @@ h2 {
     font-weight: 600;
 }
 
+/* opened-card */
+
 .open { 
     background-color: #100645;
 }
 
-/*TODO overlay */
+/*# overlay */
 
 .overlay {
         position: fixed;

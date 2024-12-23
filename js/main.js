@@ -145,35 +145,49 @@ for (let i = 0; i < 25; i++) {
     const cardNumer = document.createElement('h2');
     cardNumer.innerText = i + 1;
 
-    // creo l'elemento immagine
+    // creo l'elemento immagine e lo popolo
     const cardIcon = document.createElement('img');
     cardIcon.src = `./images/icons/${source[i].icon}.png`
 
-    // aggiungi gli elementi nel DOM
+    // aggiungi gli elementi nel alla card
     card.appendChild(cardIcon);
     card.appendChild(cardNumer);
+    // aggiungo la card al DOM
     mainDiv[0].appendChild(card);
 
+    // aggiungo il click alle card e...
     card.addEventListener('click', function () {
 
+        // se il tipo = immagine
         if (source[i].type == 'image') {
+            // creo un'immagine
             const modalImg = document.createElement('img');
+            // la popolo
             modalImg.src = `./${source[i].url}`;
+            // inserisco nella modale
             modalContent.appendChild(modalImg);
         } else {
+            // altrimenti faccio le stesse operazioni ma con il testo
             const modalText = document.createElement('p');
             modalText.innerText = source[i].text;
             modalContent.appendChild(modalText);
         }
 
+        // compare l'immagine
         modal.classList.remove('d-none');
+        // attivo l'overlay
         overlayDiv.classList.add('overlay')
+        // cambio stile alla card
         card.classList.add('open');
     })
 
+    // al click del bottone 'chiudi'
     modalBtn.addEventListener('click', function () {
+        // la modale si chiude
         modal.classList.add('d-none');
+        // il contenuto della modale viene azzerato
         modalContent.innerHTML = '';
+        // l'overlay si disattiva
         overlayDiv.classList.remove('overlay')
     })
 }
