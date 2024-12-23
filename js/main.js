@@ -132,10 +132,11 @@ const overlayDiv = document.getElementById('overlay');
 
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modal-content');
-const modalBtn = document.getElementById('modal-button')
+const modalBtn = document.getElementById('modal-button');
+const reset = document.getElementById('reset-btn');
 
 // recupero gli elementi dalla memoria se ce ne sono
-const clickedCards = JSON.parse(localStorage.getItem('clickedCards')) || [];
+let clickedCards = JSON.parse(localStorage.getItem('clickedCards')) || [];
 console.log(clickedCards);
 
 //Per il numero di caselle...
@@ -205,4 +206,14 @@ for (let i = 0; i < 25; i++) {
         // l'overlay si disattiva
         overlayDiv.classList.remove('overlay')
     })
+
 }
+
+reset.addEventListener('click', function () {
+    console.log('reset');
+    localStorage.clear();
+    clickedCards = [];
+
+    const cards = document.querySelectorAll('.box');
+    cards.forEach((element) => element.classList.remove('open'));
+})
