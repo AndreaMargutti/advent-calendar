@@ -165,12 +165,12 @@ for (let i = 0; i < 25; i++) {
             modalContent.appendChild(modalText);
         }
 
-        modal.classList.remove('d-none')
+        modal.classList.remove('d-none');
+        card.classList.add('open');
     })
 
     modalBtn.addEventListener('click', function () {
         modal.classList.add('d-none');
-
         modalContent.innerHTML = '';
     })
 }
