@@ -137,13 +137,17 @@ for (let i = 0; i < 25; i++) {
     //assegna la classe box
     card.classList.add('box');
 
-    //creo un titolo
+    //creo un titolo e ci aggiungo un numero
     const cardNumer = document.createElement('h2');
     cardNumer.innerText = i + 1;
 
+    // creo l'elemento immagine
+    const cardIcon = document.createElement('img');
+    cardIcon.src = `./images/icons/${source[i].icon}.png`
 
-    // aggiungi la card nel DOM
-    mainDiv[0].appendChild(card);
+    // aggiungi gli elementi nel DOM
+    card.appendChild(cardIcon);
     card.appendChild(cardNumer);
-}
+    mainDiv[0].appendChild(card);
 
+}
