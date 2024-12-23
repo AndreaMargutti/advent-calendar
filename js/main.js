@@ -217,3 +217,5 @@ reset.addEventListener('click', function () {
     const cards = document.querySelectorAll('.box');
     cards.forEach((element) => element.classList.remove('open'));
 })
+
+console.log(clickedCards);

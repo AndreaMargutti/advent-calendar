@@ -29,6 +29,10 @@
     display: none;
 }
 
+.d-block {
+    display: block;
+}
+
 /*# generals */
 
 body {
