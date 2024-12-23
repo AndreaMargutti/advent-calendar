@@ -128,6 +128,7 @@ const source = [
 
 // recupero il main DOM
 const mainDiv = document.getElementsByTagName('main');
+const overlayDiv = document.getElementById('overlay');
 
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modal-content');
@@ -166,11 +167,13 @@ for (let i = 0; i < 25; i++) {
         }
 
         modal.classList.remove('d-none');
+        overlayDiv.classList.add('overlay')
         card.classList.add('open');
     })
 
     modalBtn.addEventListener('click', function () {
         modal.classList.add('d-none');
         modalContent.innerHTML = '';
+        overlayDiv.classList.remove('overlay')
     })
 }
